@@ -5,12 +5,15 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { LoginComponent } from './pages/login/login.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
-import { LoginComponentComponent } from './auth/login-component/login-component.component';
-import { RegisterComponentComponent } from './auth/register-component/register-component.component';
-import { HeaderComponentComponent } from './shared/header-component/header-component.component';
-import { FooterComponentComponent } from './shared/footer-component/footer-component.component';
-import { NavigationComponentComponent } from './shared/navigation-component/navigation-component.component';
+import { AppRoutingModule } from './app-routing.module';
+import { RegisterComponent } from './auth/register/register.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RibbonComponent } from './shared/ribbon/ribbon.component';
+
 
 @NgModule({
   declarations: [
@@ -18,15 +21,17 @@ import { NavigationComponentComponent } from './shared/navigation-component/navi
     AboutComponent,
     HomeComponent,
     ContactComponent,
+    LoginComponent,
     NotfoundComponent,
-    LoginComponentComponent,
-    RegisterComponentComponent,
-    HeaderComponentComponent,
-    FooterComponentComponent,
-    NavigationComponentComponent
+    RegisterComponent,
+    HeaderComponent,
+    FooterComponent,
+    RibbonComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
