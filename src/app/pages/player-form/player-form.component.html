@@ -1,0 +1,24 @@
+<app-ribbon title="Player-form" folder="Pages"></app-ribbon>
+
+<div class="container">
+    <form [formGroup]="newForm" (ngSubmit)="postForm(newForm.value)">
+        <div class="form-group">
+            <label for="Player-formn">Name</label>
+            <input type="text" class="form-control" placeholder="Name" formControlName="name">
+        </div>
+
+        <div class="form-group">
+            <label for="Player-forml">Lastname</label>
+            <input type="text" class="form-control" placeholder="Lastname" formControlName="lastname">
+        </div>
+
+        <div class="form-group">
+            <label for="Player-forma">Avatar</label>
+            <input type="file" class="form-control" placeholder="Avatar" formControlName="avatar">
+        </div>
+        <div class="col-md-18">
+            <input type="submit" value="Save" class="btn btn-primary pull-right push-bottom" >
+        </div>
+    </form>
+
+</div>

@@ -55,40 +55,29 @@
     </div>
 </div>
 
-<section class="user-container">
-    <article class="user" *ngFor="let user of users.data">
-        <div>
-        <img src="{{user.avatar}}" alt=""> 
-    </div>
-    <div>
-        <p>{{user.id}}</p>  
-        <p>{{user.email}}</p>  
-        <h4>{{user.first_name}}{{user.last_name}}</h4>      
-    </div>
-    </article>
-</section>
 
-<div class="home-intro light secundary">
-    <div class="container">
+<div class="container">
+    <h3>List PLayers</h3><br>
+    <button type="button" class="btn btn-lg btn-primary" (click)="newPlayer()">New player</button>
 
-        <div class="row">
-            <div class="col-md-8">
-                <p>
-                    The fastest way to grow your business with the leader in <em>Technology</em>
-                    <span>Check out our options and features included.</span>
-                </p>
-            </div>
-            <div class="col-md-4">
-                <div class="get-started">
-                    <a href="#" class="btn btn-lg btn-primary">Get Started Now!</a>
-                    <div class="learn-more">or <a href="index.html">learn more.</a></div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">name</th>
+        <th scope="col">lastname</th>
+        <th scope="col">avatar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let player of players">
+        <th scope="row">{{player.id}}</th>
+        <td>{{player.name}}</td>
+        <td>{{player.lastname}}</td>
+        <td>{{player.avatar}}</td>
+      </tr>
+    </tbody>
+</table>
 <div class="container">
 
     <div class="row center">
